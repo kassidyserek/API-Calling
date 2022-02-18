@@ -27,6 +27,21 @@ struct ContentView: View {
     }
     func getInspired() {
         let apiKey = "?rapidapi-key=dcdeb11b82msh92bdd760de21315p1ddd5djsnd15d938d1e5b"
+        let query = "https://inspiring-quotes.p.rapidapi.com/random\(apiKey)"
+        if let url = URL(string: query) {
+            if let data = try? Data(contentsOf: url) {
+                let json = try! JSON(data: data)
+                if json["success"] == true {
+                    let contents = json["body"].arrayValue
+                    for item in contents {
+                        let quote = item["quote"].stringValue
+                        let author = item["author"].stringValue
+                        let inspire = Inspire(quote: quote, author: author)
+                        inspires.append(inspire)
+                    }
+                }
+            }
+        }
     }
 }
 

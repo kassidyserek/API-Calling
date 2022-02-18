@@ -13,6 +13,7 @@
 		3F23C06E27BF4532009490BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F23C06D27BF4532009490BB /* Preview Assets.xcassets */; };
 		3F23C07927BF4532009490BB /* API_CallingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23C07827BF4532009490BB /* API_CallingTests.swift */; };
 		3F23C08427BF4533009490BB /* API_CallingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23C08327BF4533009490BB /* API_CallingUITests.swift */; };
+		3F23C09227BF4A5A009490BB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23C09127BF4A5A009490BB /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		3F23C07F27BF4532009490BB /* API CallingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "API CallingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F23C08327BF4533009490BB /* API_CallingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_CallingUITests.swift; sourceTree = "<group>"; };
 		3F23C08527BF4533009490BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F23C09127BF4A5A009490BB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				3F23C06627BF452B009490BB /* API_CallingApp.swift */,
 				3F23C06827BF452B009490BB /* ContentView.swift */,
+				3F23C09127BF4A5A009490BB /* SwiftyJSON.swift */,
 				3F23C06A27BF4532009490BB /* Assets.xcassets */,
 				3F23C06F27BF4532009490BB /* Info.plist */,
 				3F23C06C27BF4532009490BB /* Preview Content */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F23C09227BF4A5A009490BB /* SwiftyJSON.swift in Sources */,
 				3F23C06927BF452B009490BB /* ContentView.swift in Sources */,
 				3F23C06727BF452B009490BB /* API_CallingApp.swift in Sources */,
 			);
