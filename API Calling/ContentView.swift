@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var inspires = [Inspire]()
+    @State private var showingAlert = false
     var body: some View {
         NavigationView {
             List(inspires) { inspire in
@@ -23,6 +24,11 @@ struct ContentView: View {
         }
         .onAppear(perform: {
             getInspired()
+        })
+        .alert(isPresented: $showingAlert, content: {
+            Alert(title: Text("Loading Error"),
+                  message: Text("There was a problem loading the data"),
+                  dismissButton: .default(Text("OK")))
         })
     }
     func getInspired() {
@@ -39,9 +45,11 @@ struct ContentView: View {
                         let inspire = Inspire(quote: quote, author: author)
                         inspires.append(inspire)
                     }
+                    return
                 }
             }
         }
+        showingAlert = true
     }
 }
 
